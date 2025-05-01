@@ -31,28 +31,12 @@ if ($stmt->execute()) {
 } else {
   echo "Error: " . $stmt->error;
 }
-if ($stmt->execute()) {
-    echo "<script>alert('Feedback submitted successfully!');</script>";
-}
 
 
 $stmt->close();
 $conn->close();
-echo '<a href="index.html">Back To Home Page</a>';
    
-/* 
-echo '<h1>You are welcom</h1>';
-$name = $sub = $email = $comment="";
-if (isset($_POST['submit'])) {
-	$name=$_POST["name"];
-	echo "user name :$name <br><br>";
-	$email=$_POST["email"];
-	echo "user email : $email <br><br>";
-	$sub=$_POST["sub"];
-	echo "user Subject : $sub <br><br>";
-	$comment=$_POST["Message"];
-	echo "user Comment :$comment <br><br>";
-}
-*/
+header("Location: index.html");
+exit();
 
  ?>
